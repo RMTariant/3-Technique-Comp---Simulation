@@ -3,3 +3,35 @@
 % Donc aucun changement temporel
 
 % Ouvrir le A-line ou B-scan
+
+% RMT
+% Algorythme #1 pour detecter une variation instantanné
+% Fear my POWARRRRRR
+
+function analysis = Tech_1_0
+%On va utiliser trois techniques différentes
+
+%1 faire notre comparaison sur un A-line
+
+scan;
+size_s=size(scan);
+analysis=zeros(size_s);
+h=5;
+
+for ii=1:size_s(2)
+    for jj=1:size_s(1)
+        vect=jj-5:jj+5;
+        vect=vect(vect>0);vect=vect(vect<size_s(1));
+        analysis(jj,ii)=std(scan(vect,ii));
+    end
+end
+
+
+figure(2)
+imshow(mat2gray(analysis))
+
+
+
+
+
+end
