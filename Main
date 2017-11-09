@@ -2,3 +2,13 @@
 % Ceci est le main qui appelle toute les fonctions
 
 clc
+
+%% ************Décider quoi faire**************
+
+% Créer une scan OCT
+
+% Ouvrir un scan OCT
+
+% Faire une des trois analyses
+
+% Afficher ou enregistrer les résultats
